@@ -39,6 +39,16 @@ app.get('/logout', (req, res) => {
   res.send('Goodbye!');
 });
 
+// app.get('/logout', (req, res) => {
+//   req.logout((err) => {
+//       if (err) { return next(err); }
+//       req.session.destroy((err) => {
+//           if (err) { return next(err); }
+//           res.send('Goodbye!');
+//       });
+//   });
+// });
+
 app.get('/auth/google/failure', (req, res) => {
   res.send('Failed to authenticate..');
 });
